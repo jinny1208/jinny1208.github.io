@@ -1,0 +1,6 @@
+This folder contains the audio generated from the proposed PEM model using 10 GSTs.
+
+Audios generated and analyzed for each subjective evaluation section is indicated in the individual file name as task1 or task2. 
+
+The "Individual_Tokens" directory contains the audio samples for each of the ten global style tokens. The individual tokens are used for further validation of our analysis 
+as stated in Section 4 of the paper. 

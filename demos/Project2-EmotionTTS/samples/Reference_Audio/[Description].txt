@@ -1,0 +1,2 @@
+As stated in the paper, the ABX subjective test is made up of two parts. 
+The reference audio used for each section is indicated in the individual file name as task1 or task2. 
