@@ -3,12 +3,12 @@
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
 
-<title>TaKOtron2-Pro: Optimizing Korean TTS Via the Interplay Between Syntactic and Acoustic Cues</title>
+<title>Unsupervised Paralinguistic Learning for Generalizable Emotional TTS</title>
 <meta name="generator" content="Jekyll v3.9.0">
-<meta property="og:title" content="TaKOtron2-Pro: Optimizing Korean TTS Via the Interplay Between Syntactic and Acoustic Cues">
+<meta property="og:title" content="Unsupervised Paralinguistic Learning for Generalizable Emotional TTS">
 <meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://jinny1208.github.io/demos/Project1-TaKOtron2-Pro/">
-<meta property="og:url" content="https://jinny1208.github.io/demos/Project1-TaKOtron2-Pro/">
+<link rel="canonical" href="https://jinny1208.github.io/demos/Project2-EmotionTTS/">
+<meta property="og:url" content="https://jinny1208.github.io/demos/Project2-EmotionTTS/">
 <meta name="twitter:card" content="summary">
 
 
@@ -25,7 +25,7 @@
     </section>
 
     <section class="main-content">
-      <h1 id=""><center> TaKOtron2-Pro: Optimizing Korean TTS Via the Interplay Between Syntactic and Acoustic Cues </center></h1>
+      <h1 id=""><center> Unsupervised Paralinguistic Learning for Generalizable Emotional TTS </center></h1>
 
 <!-- <center> Yejin Jeon <sup>1</sup>, Yunsu Kim <sup>1,</sup><sup>2</sup>, Gary Geunbae Lee<sup>1</sup><sup>2</sup> </center>
 <center> <sup>1</sup> Graduate School of Artificial Intelligence, Pohang University of Science and Technology (POSTECH), Pohang, South Korea</center>
@@ -35,29 +35,25 @@
 <!-- <h2 id="abstract">Abstract</h2>
 <p>Fill in the abstract.</p> -->
 
-<h2 id="notes">Notes</h2>
+<h2 id="notes">Table of Contents</h2>
 <div>
   <ul>
-    <li>Model A: Original Tacotron2 model</li>
-    <li>Model B: Original Tacotron2 model trained with data augmentation</li>
-    <li>Model C: Tacotron2 model with Stepwise Monotonic Attention (SMA) </li>
-    <li>Model D: Model C + CBHL</li>
-    <li>Model E: Model C + CBHL + NCP</li>
-    <li>Model F: Model C + TP-GST</li>
-    <li>Model G: Proposed TaKOtron2-Pro model (Tacotron2 + SMA + NCP + CBHL + TP-GST) </li>
+    <li>Seen Emotions</li>
+    <li>Unseen Emotions</li>
+    <li>Individual Tokens</li>
   </ul>
 </div>
 
 <br>
 <br>
 
-<p>Sentence 1: 이 은하는 거대한 나선은하가 다른 은하와 고속으로 충돌한 뒤 구조와 형태가 바뀌며 형성된 것으로, 중앙과 외곽으로 두 개의 고리가 있어 고리은하로도 불리고 있다.</p>
+<p>Emotion Category (Seen): Anger</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>A</strong></th>
-      <th style="text-align: center"><strong>B</strong></th>
-      <th style="text-align: center"><strong>C</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
     </tr>
   </thead>
 
@@ -67,36 +63,16 @@
       <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent1.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent1.wav" controls="" preload=""></audio></td>
     </tr>
-  </tbody>
-
-  <thead>
-    <tr>
-      <th style="text-align: center"><strong>D</strong></th>
-      <th style="text-align: center"><strong>E</strong></th>
-      <th style="text-align: center"><strong>F</strong></th>
-      <th style="text-align: center"><strong>G</strong></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td style="text-align: left"><audio src="samples/2-Baseline-Org_SMA_CBHG/sent1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/3-Baseline-Org_SMA_CBHG_NP/sent1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/4-Baseline-Org_SMA_justTPGST0.3/sent1-tpgst0.3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/5-Tako2-Pro/sent1.wav" controls="" preload=""></audio></td>
-    </tr>
-  </tbody>
 </table>
 <br>
-<br>
 
-<p>Sentence 2: 수레바퀴 은하 중심부의 밝은 고리에는 엄청난 양의 뜨거운 가스와 함께 거대한 젊은 별이 성단을 이루고 있고, 외곽 고리는 약 4억4천만 년에 걸쳐 확장하며 주변의 가스를 자극해 새로운 별을 형성하는 것으로 나타났다.</p>
+<p>Emotion Category (Seen): Disgust</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>A</strong></th>
-      <th style="text-align: center"><strong>B</strong></th>
-      <th style="text-align: center"><strong>C </strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
     </tr>
   </thead>
 
@@ -107,35 +83,16 @@
       <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent2.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
-
-  <thead>
-    <tr>
-      <th style="text-align: center"><strong>D</strong></th>
-      <th style="text-align: center"><strong>E</strong></th>
-      <th style="text-align: center"><strong>F</strong></th>
-      <th style="text-align: center"><strong>G</strong></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td style="text-align: left"><audio src="samples/2-Baseline-Org_SMA_CBHG/sent2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/3-Baseline-Org_SMA_CBHG_NP/sent2.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/4-Baseline-Org_SMA_justTPGST0.3/sent2-tpgst0.3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/5-Tako2-Pro/sent2.wav" controls="" preload=""></audio></td>
-    </tr>
-  </tbody>
 </table>
 <br>
-<br>
 
-<p>Sentence 3: 수레바퀴 은하도 우리 은하처럼 과거에는 정상적인 나선 은하였던 것으로 추정되지만 다른 은하와 충돌하면서 구조와 형태가 바뀌게 됐으며, 앞으로도 계속 바뀔 것이라고 설명했다.</p>
+<p>Emotion Category (Seen): Fear</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>A</strong></th>
-      <th style="text-align: center"><strong>B</strong></th>
-      <th style="text-align: center"><strong>C</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
     </tr>
   </thead>
 
@@ -146,35 +103,16 @@
       <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent3.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
-
-  <thead>
-    <tr>
-      <th style="text-align: center"><strong>D</strong></th>
-      <th style="text-align: center"><strong>E</strong></th>
-      <th style="text-align: center"><strong>F</strong></th>
-      <th style="text-align: center"><strong>G</strong></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td style="text-align: left"><audio src="samples/2-Baseline-Org_SMA_CBHG/sent3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/3-Baseline-Org_SMA_CBHG_NP/sent3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/4-Baseline-Org_SMA_justTPGST0.3/sent3-tpgst0.3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/5-Tako2-Pro/sent3.wav" controls="" preload=""></audio></td>
-    </tr>
-  </tbody>
 </table>
 <br>
-<br>
 
-<p>Sentence 4: 소셜미디어에 확산한 결혼식 당시 영상을 보면 앰비르의 부케에서 시작된 불은 곧 부부에게로 번졌다. 이들은 등에 불이 붙어 활활 타오르고 있음에도 평온하게 미소를 지으며 퇴장한다. 이를 지켜보는 하객들은 놀란 표정으로 환호를 보낸다. 인사를 마친 부부가 절도 있게 땅에 무릎을 꿇고 앉자 주변에 있던 이들이 곧 소화기로 불을 껐다.</p>
+<p>Emotion Category (Seen): Happiness</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>A</strong></th>
-      <th style="text-align: center"><strong>B</strong></th>
-      <th style="text-align: center"><strong>C</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
     </tr>
   </thead>
 
@@ -185,35 +123,120 @@
       <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
+</table>
+<br>
+<br>
 
+<p>Emotion Category (Seen): Sadness</p>
+<table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>D</strong></th>
-      <th style="text-align: center"><strong>E</strong></th>
-      <th style="text-align: center"><strong>F</strong></th>
-      <th style="text-align: center"><strong>G</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td style="text-align: left"><audio src="samples/2-Baseline-Org_SMA_CBHG/sent4.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/3-Baseline-Org_SMA_CBHG_NP/sent4.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/4-Baseline-Org_SMA_justTPGST0.3/sent4-tpgst0.3.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="samples/5-Tako2-Pro/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
     </tr>
   </tbody>
 </table>
 <br>
 <br>
 
-<p>Sentence 5: 김 대표는 전 세계적으로 약 3조 달러에 달하는 경제적 가치를 창출할 것으로 예상되는 메타버스 산업의 경제적 파급 효과에 주목해야 한다고도 강조했다. 특히 한국은 IT 강국으로서 쌓아온 기반과 콘텐츠 역량으로 메타버스에 있어서도 전 세계적으로 가장 앞서나가고 있다고 평가했다. 아울러 교육 분야는 다양한 활용 사례로 진화확장을 이끌며 주도적인 역할을 하고 있어 성장 가능성이 높은 시장이라고 설명했다.</p>
+<p>Emotion Category (Seen): Surprise</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+
+<p>Emotion Category (Seen): Neutral</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+
+<p>Emotion Category (Unseen): Radio-Parallel</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<p>Emotion Category (Unseen): Radio-Unparallel</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<p>Emotion Category (unseen): Reporter-Parallel</p>
   <table>
     <thead>
       <tr>
-        <th style="text-align: center"><strong>A</strong></th>
-        <th style="text-align: center"><strong>B</strong></th>
-        <th style="text-align: center"><strong>C</strong></th>
+        <th style="text-align: center"><strong>Reference</strong></th>
+        <th style="text-align: center"><strong>GST-B</strong></th>
+        <th style="text-align: center"><strong>E-TTS</strong></th>
       </tr>
     </thead>
   
@@ -224,25 +247,103 @@
         <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent5.wav" controls="" preload=""></audio></td>
       </tr>
     </tbody>
-  
-    <thead>
-      <tr>
-        <th style="text-align: center"><strong>D</strong></th>
-        <th style="text-align: center"><strong>E</strong></th>
-        <th style="text-align: center"><strong>F</strong></th>
-        <th style="text-align: center"><strong>G</strong></th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      <tr>
-        <td style="text-align: left"><audio src="samples/2-Baseline-Org_SMA_CBHG/sent5.wav" controls="" preload=""></audio></td>
-        <td style="text-align: left"><audio src="samples/3-Baseline-Org_SMA_CBHG_NP/sent5.wav" controls="" preload=""></audio></td>
-        <td style="text-align: left"><audio src="samples/4-Baseline-Org_SMA_justTPGST0.3/sent5-tpgst0.3.wav" controls="" preload=""></audio></td>
-        <td style="text-align: left"><audio src="samples/5-Tako2-Pro/sent5.wav" controls="" preload=""></audio></td>
-      </tr>
-    </tbody>
   </table>
+<br>
+
+<p>Individual Tokens: GST-B</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+      <th style="text-align: center"><strong>Reference</strong></th>
+      <th style="text-align: center"><strong>GST-B</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+      <th style="text-align: center"><strong>E-TTS</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+
+<p>Individual Tokens: E-TTS</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Token1</strong></th>
+      <th style="text-align: center"><strong>Token2</strong></th>
+      <th style="text-align: center"><strong>Token3</strong></th>
+      <th style="text-align: center"><strong>Token4</strong></th>
+      <th style="text-align: center"><strong>Token5</strong></th>
+      <th style="text-align: center"><strong>Token6</strong></th>
+      <th style="text-align: center"><strong>Token7</strong></th>
+      <th style="text-align: center"><strong>Token8</strong></th>
+      <th style="text-align: center"><strong>Token9</strong></th>
+      <th style="text-align: center"><strong>Token10</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<p>Emotion Category (Unseen): Reporter-Unparallel</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Token1</strong></th>
+      <th style="text-align: center"><strong>Token2</strong></th>
+      <th style="text-align: center"><strong>Token3</strong></th>
+      <th style="text-align: center"><strong>Token4</strong></th>
+      <th style="text-align: center"><strong>Token5</strong></th>
+      <th style="text-align: center"><strong>Token6</strong></th>
+      <th style="text-align: center"><strong>Token7</strong></th>
+      <th style="text-align: center"><strong>Token8</strong></th>
+      <th style="text-align: center"><strong>Token9</strong></th>
+      <th style="text-align: center"><strong>Token10</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/0-OrgTaco-DA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="samples/1-Baseline-Org_SMA/sent4.wav" controls="" preload=""></audio></td>
+    </tr>
+  </tbody>
+</table>
 <br>
 
       <footer class="site-footer">
